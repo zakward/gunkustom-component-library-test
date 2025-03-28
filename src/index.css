@@ -1,0 +1,21 @@
+/* 1. Import Tailwind's base, components, and utilities */
+@font-face {
+  font-family: 'Roboto';
+  /* Adjust this path to where Roboto-Regular.ttf actually lives relative to this CSS file */
+  src: url('./assets/fonts/Roboto-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* 3. Optionally set a default font for the library’s components */
+body,
+button,
+input,
+textarea {
+  font-family: 'Roboto', sans-serif;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 2. Define your custom font-face for Roboto */
