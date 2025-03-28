@@ -5,16 +5,16 @@ import path from 'path';
 export default defineConfig({
   plugins: [react()],
   build: {
-    emptyOutDir: false, // Prevent Vite from clearing out declaration files if needed
+    emptyOutDir: false, // Prevent Vite from deleting the dist folder contents
     lib: {
+      // Single entry that re-exports everything
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: 'GunkustomComponentLibrary',
       formats: ['es', 'cjs'],
       fileName: (format) => `gunkustom-component-library.${format}.js`,
     },
-    // Optionally configure asset directory
-    assetsDir: 'assets',
     rollupOptions: {
+      // Mark React and ReactDOM as external so they won't be bundled
       external: ['react', 'react-dom'],
     },
   },
