@@ -7,7 +7,7 @@ export interface ButtonProps {
 
 export default function Button({ children }: ButtonProps) {
   return (
-    <button style={{ backgroundColor: 'blue', color: 'white', padding: '10px 20px', borderRadius: '5px' }}>
+    <button style={{ backgroundColor: '#FF6B00', color: "white", height: "40px", width: "110px", borderRadius: '0px', fontSize: "16px" }}>
       {children}
     </button>
   );
